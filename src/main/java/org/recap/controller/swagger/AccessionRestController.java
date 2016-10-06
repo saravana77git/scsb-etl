@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/itemAndCustomerCode")
+@RequestMapping("/accession")
 @Api(value="bibInfo", description="Get Item and customer code", position = 1)
 public class AccessionRestController {
 
@@ -31,7 +31,7 @@ public class AccessionRestController {
     AccessionService accessionService;
 
 
-    @RequestMapping(value="/exportItemCustomerInfo", method = RequestMethod.GET)
+    @RequestMapping(value="/accessionItem", method = RequestMethod.POST)
 
     @ResponseBody
     public ResponseEntity exportItemBarCodeandCustomerCode(@ApiParam(value = "itemBarCode" , required = true, name = "itemBarCode") @RequestParam String itemBarCode,
